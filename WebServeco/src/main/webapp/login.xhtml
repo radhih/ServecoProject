@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	 xmlns:p="http://primefaces.org/ui"
+	  xmlns:a="http://xmlns.jcp.org/jsf/passthrough"> 
+<h:head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description"
+	content="Creative - Bootstrap 3 Responsive Admin Template" />
+<meta name="author" content="GeeksLabs" />
+<meta name="keyword"
+	content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal" />
+<link rel="shortcut icon" href="/WebServeco/Ressources/Rlogin/img/bg-1.jpg" />
+
+<title>Login</title>
+
+
+<link href="/WebServeco/Ressources/Rlogin/css/bootstrap.min.css" rel="stylesheet" />
+<!-- bootstrap theme -->
+<link href="/WebServeco/Ressources/Rlogin/css/bootstrap-theme.css" rel="stylesheet" />
+
+
+<link href="/WebServeco/Ressources/Rlogin/css/elegant-icons-style.css" rel="stylesheet" />
+<link href="/WebServeco/Ressources/Rlogin/css/font-awesome.css" rel="stylesheet" />
+<!-- Custom styles -->
+<link href="/WebServeco/Ressources/Rlogin/css/style.css" rel="stylesheet" />
+<link href="/WebServeco/Ressources/Rlogin/css/style-responsive.css" rel="stylesheet" />
+
+
+</h:head>
+<f:view transient="true"> 
+<body class="login-img3-body">
+
+	<div class="container">
+<p:growl id="growl" showDetail="true" sticky="true" /> 
+      <h:form class="login-form" >        
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <h:inputText id="username" type="text" class="form-control" required="true"   value="#{loginBean.supplier.login}" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <h:inputSecret id="password"  type="password" redisplay="true" class="form-control" value="#{loginBean.supplier.passwd}" required="true"/>
+            </div>
+            
+          <h:commandButton id="button" action="#{loginBean.doLogin()}" value="Login"  class="btn btn-primary btn-lg btn-block" type="submit"/>
+                             
+        
+   
+        </div>
+   <h:form>         
+ <h:commandButton id="but" action="#{navigationBean.redirectToRegiser()}" value="Register"  class="btn btn-primary btn-lg btn-block" type="submit"/>
+</h:form>
+      </h:form>
+ 
+		</div>
+
+</body>
+ </f:view>
+</html>

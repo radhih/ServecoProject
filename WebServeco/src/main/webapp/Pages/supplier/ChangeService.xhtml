@@ -1,0 +1,84 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+       
+                    <div id="tab-general">
+   
+                        <div class="row mbl">	
+<h1>Change My Service</h1>
+<h:panelGrid columns="6">
+<h:form>
+
+
+<h:dataTable border="1" value="#{serviceSupplierBean.supplierModel}" var="R">
+			
+			<h:column id="column1">
+				<f:facet name="header">
+					<h:outputText value="Age"></h:outputText>
+				</f:facet>
+			#{R.age}
+		
+			
+		</h:column>
+			
+			<h:column id="column2">
+				<f:facet name="header">
+					<h:outputText value="FirstName"></h:outputText>
+				</f:facet>
+			#{R.firstName}
+            </h:column> 
+            
+           
+			
+			<h:column id="column3">
+				<f:facet name="header">
+					<h:outputText value="LastName"></h:outputText>
+				</f:facet>
+			#{R.lastName}
+			</h:column>
+			
+			
+	
+            
+            <h:column id="column4">
+				<f:facet name="header">
+					<h:outputText value=" Mail"></h:outputText>
+				</f:facet>
+			#{R.mail}
+			
+            </h:column> 
+            
+            
+            <h:column id="column5">
+				<f:facet name="header">
+					<h:outputText value="Service"></h:outputText>
+				</f:facet>
+			#{R.service}
+            </h:column> 
+            
+             
+            
+            
+   <h:column id="column6">
+				<f:facet name="header">
+			
+				</f:facet>
+          <h:commandButton id="button" action="#{serviceSupplierBean.doMail()}" value="Change a Service"  class="btn btn-primary btn-lg btn-block" type="submit"/>
+            </h:column> 
+
+</h:dataTable>
+		
+
+
+
+</h:form>
+</h:panelGrid>
+    </div>
+     </div>
+              
+      </ui:define>
+
+	</ui:composition>

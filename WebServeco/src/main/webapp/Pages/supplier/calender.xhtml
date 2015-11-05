@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"     
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">     
+   <h:form>   
+    <p:growl id="messages" showDetail="true" />
+    <h:panelGrid columnClasses="value">
+    
+        <h3>Reservations Dates</h3>
+        <p:schedule id="scheduleLocale" value="#{scheduleView.eventModel}" locale="en" /> 
+        
+    </h:panelGrid>    
+</h:form>
+ 
+<script type="text/javascript">
+    PrimeFaces.locales['en'] = {
+        closeText: 'Close',
+        prevText: 'Prev',
+        nextText: 'Next',
+        currentText: 'Current',
+        monthNames: ['Junary','February','March','April','May','June',
+            'July','August','September','October','November','December'],
+        monthNamesShort: ['Jun','Feb','Mar','Apr','May','June',
+            'July','Aug','Sept','Oct','Nov','Dec'],
+        dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+        dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+        dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+        weekHeader: 'Hf',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: '',
+        month: 'month',
+        week: 'week',
+        day: 'day',
+        allDayText : 'allDay'
+    };
+</script>
+<style type="text/css">
+    .value {
+        width: 1000px;
+    }
+</style>          
+      </ui:define>
+	</ui:composition>

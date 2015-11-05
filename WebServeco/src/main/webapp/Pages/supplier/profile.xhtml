@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="../../Templates/layout.xhtml"
+      xmlns:p="http://primefaces.org/ui"> 
+
+      <ui:define name="content">
+      
+      <h:panelGrid columns="2">
+  <div>
+   <img src="#{request.contextPath}#{supplierProfBean.sup.image}" />
+ </div>
+ <h:form>
+ 
+ <div>
+    <h:outputText value="Name:" />
+    <h:outputText value="#{supplierProfBean.sup.firstName}" />
+ </div>
+    
+ <div>
+    <h:outputText value="LastName:" />
+    <h:outputText value="#{supplierProfBean.sup.lastName}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="Age:" />
+    <h:outputText value="#{supplierProfBean.sup.age}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="E-mail:" />
+    <h:outputText value="#{supplierProfBean.sup.mail}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="CovereArea : " />
+    <h:outputText value="#{supplierProfBean.sup.coveredArea}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="Nombre de voiture:" />
+    <h:outputText value="#{supplierProfBean.sup.nbvehicul}" />
+ </div>
+ 
+ 
+ 
+ </h:form>
+    
+    
+  
+</h:panelGrid>
+        
+
+    </ui:define>
+
+	</ui:composition>

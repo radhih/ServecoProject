@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      	 xmlns:p="http://primefaces.org/ui"
+      
+      template="../../Templates/layout.xhtml"
+            	 xmlns:a="http://xmlns.jcp.org/jsf/passthrough"> 
+      
+      <ui:define name="content">
+          <div class="panel panel-grey">
+                                            <div class="panel-heading">
+                                               Add New Car</div>
+                                                <p:growl id="growl" showDetail="true" sticky="true" /> 
+                                                
+                                            <div class="panel-body pan">
+                                                <h:form enctype="multipart/form-data">
+                                                <div class="form-body pal">
+                                                <h:form enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                         <p:growl id="messages" showDetail="true" />
+ Upload your Car photo  <p:fileUpload value="#{carBean.file}" mode="simple" skinSimple="true" />
+                                                   
+                                                        </div>      
+                                                          <div class="form-group">
+                                                   <div class="input-icon right">
+                                                            <i class="fa fa-user"></i>                                              
+ <h:inputText a:placeholder="Car Brand" value="#{carBean.brand}" id="inputText" type="text"  class="form-control" a:required="true" />
+</div> 
+</div>
+<div class="form-group">
+   <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+        <h:outputText value="Set car Available: " />
+        <p:selectBooleanButton id="value1" value="#{carBean.value1}" onLabel="Yes" offLabel="No" style="width:60px" />
+ 
+      
+    </h:panelGrid>             
+           </div>      
+                                 
+  <h:commandButton id="button" action="#{carBean.DoAddCar()}" value="ADD"  class="btn btn-primary" type="submit"/>
+                                                        
+   </h:form>
+                                       
+       
+    </div></h:form></div></div>
+      </ui:define>
+
+	</ui:composition>

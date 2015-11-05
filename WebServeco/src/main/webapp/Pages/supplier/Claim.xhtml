@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="../../Templates/layout.xhtml"
+      xmlns:p="http://primefaces.org/ui"> 
+
+      <ui:define name="content">
+
+      
+       <div class="panel panel-green">
+              <div class="panel-heading">
+                  Contacts Form</div>
+              <div class="panel-body pan">
+                  <h:form action="#">
+                  <div class="form-body pal">
+                     
+                      <div class="form-group">
+                          <label for="inputSubject" class="control-label">
+                              Subject</label>
+                          <div class="input-icon right">
+                              <i class="fa fa-tag"></i>
+                              <h:inputText id="inputSubject" type="text" placeholder="" class="form-control" value="#{addSupClaimBean.sclaim.rep}"/>
+                              
+                              </div>
+                      </div> 
+                      <div class="form-group">
+                          <label for="inputMessage" class="control-label">
+                              Message</label>
+                              
+                              <h:inputText type="text"  class="form-control" value="#{addSupClaimBean.sclaim.topic}"/>
+                               
+                              </div>
+                      
+                  </div>
+                  <div class="form-actions text-right pal">
+                  
+                  		 
+                   
+                  	<h:commandButton value="Add"
+                  				action="#{addSupClaimBean.DoAdd()}" />
+                  		
+       				 
+                  	 
+                  </div>
+                  </h:form>
+              </div>
+          </div>
+
+
+      
+   </ui:define>   
+ </ui:composition>

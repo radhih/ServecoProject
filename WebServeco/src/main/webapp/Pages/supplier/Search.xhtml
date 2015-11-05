@@ -1,0 +1,66 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      	 xmlns:p="http://primefaces.org/ui"
+      
+      template="../../Templates/layout.xhtml">
+     
+     
+     
+     
+     
+      <ui:define name="content">
+        
+
+      <h:panelGrid columns="2">
+  <div>
+   <img src="#{request.contextPath}#{findBean.supplier.image}" />
+ </div>
+ <h:form>
+ 
+ <div>
+    <h:outputText value="Name:" />
+    <h:outputText value="#{findBean.supplier.firstName}" />
+ </div>
+    
+ <div>
+    <h:outputText value="LastName:" />
+    <h:outputText value="#{findBean.supplier.lastName}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="Age:" />
+    <h:outputText value="#{findBean.supplier.age}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="E-mail:" />
+    <h:outputText value="#{findBean.supplier.mail}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="CovereArea : " />
+    <h:outputText value="#{findBean.supplier.coveredArea}" />
+ </div>
+ 
+ <div>
+    <h:outputText value="Service:" />
+    <h:outputText value="#{findBean.supplier.service}" />
+ </div>
+ 
+           <h:commandButton id="button" action="#{findBean.doM()}" value="Send Mail"  class="btn btn-primary btn-lg btn-block" type="submit"/>
+ 
+ 
+ </h:form>
+
+
+        
+</h:panelGrid>
+    
+      </ui:define>
+
+
+
+
+	</ui:composition>

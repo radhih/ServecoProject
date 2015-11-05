@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui"
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+       
+                    <h:form> 
+    <p:dataScroller value="#{carsBean.vehiculs}" var="car" chunkSize="10">
+        <f:facet name="header">
+            Scroll Down to Load More Cars
+        </f:facet>
+ 
+        <h:panelGrid columns="2" style="width:100%" columnClasses="logo,detail">
+   <img src="#{request.contextPath}/Ressources/photos/#{car.image}" />
+ 
+            <p:outputPanel>
+                <h:panelGrid columns="2" cellpadding="5">
+                    <h:outputText value="Id:" />
+                    <h:outputText value="#{car.id}" style="font-weight: bold"/>
+ 
+                    <h:outputText value="Car Brand:" />
+                    <h:outputText value="#{car.type}" style="font-weight: bold"/>
+ 
+                    <h:outputText value="Availability:" />
+                    <h:outputText value="#{car.available}" style="font-weight: bold"/>
+                </h:panelGrid>
+            </p:outputPanel>
+        </h:panelGrid>
+    </p:dataScroller>
+</h:form>
+              
+      </ui:define>
+
+	</ui:composition>

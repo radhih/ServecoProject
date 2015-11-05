@@ -1,0 +1,85 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+       
+                    <div id="tab-general">
+                        <div class="row mbl">	
+<h1>list of Reservations</h1>
+<h:form>
+
+<h:dataTable border="1" value="#{reservationBean.reservationModel}" var="R">
+			
+			<h:column id="column1">
+				<f:facet name="header">
+					<h:outputText value="Date"></h:outputText>
+				</f:facet>
+			#{R.date}
+		
+			
+		</h:column>
+			
+			<h:column id="column2">
+				<f:facet name="header">
+					<h:outputText value="Status"></h:outputText>
+				</f:facet>
+			#{R.status}
+            </h:column> 
+            
+           
+			
+			<h:column id="column3">
+				<f:facet name="header">
+					<h:outputText value="Client"></h:outputText>
+				</f:facet>
+			#{R.client.firstName}
+			</h:column>
+			
+			
+	
+            
+            <h:column id="column4">
+				<f:facet name="header">
+					<h:outputText value="Client Mail"></h:outputText>
+				</f:facet>
+			#{R.client.mail}
+			
+            </h:column> 
+            
+            
+            <h:column id="column5">
+				<f:facet name="header">
+					<h:outputText value="Vehicul Brand"></h:outputText>
+				</f:facet>
+			#{R.vehicul.type}
+            </h:column> 
+            
+             
+            <h:column id="column6">
+				<f:facet name="header">
+					<h:outputText value="Vehicul Matriculation"></h:outputText>
+				</f:facet>
+			#{R.vehicul.id}
+            </h:column> 
+            
+   <h:column id="column9">
+				<f:facet name="header">
+			
+				</f:facet>
+          <h:commandButton id="button" action="#{reservationBean.doMail()}" value="Send E-Mail"  class="btn btn-primary btn-lg btn-block" type="submit"/>
+            </h:column> 
+
+</h:dataTable>
+		
+
+
+
+</h:form>
+    </div>
+                    </div>
+              
+      </ui:define>
+
+	</ui:composition>

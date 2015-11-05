@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"  
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+       
+          <div id="tab-general">
+              <div class="row mbl">	
+<h1><b>Consult List Of Note</b></h1>
+<h:form>
+
+<p:dataTable value="#{rankBean.noteModel}" var="R">
+ 
+    <p:column headerText="Id">
+       <f:facet name="header">
+					<h:outputText value="Supplier Name"></h:outputText>
+				</f:facet>
+			#{R.supplier.firstName}
+    </p:column>
+    <p:column headerText="Id">
+       <f:facet name="header">
+					<h:outputText value="Supplier LastName"></h:outputText>
+				</f:facet>
+			#{R.supplier.lastName}
+    </p:column>
+    <p:column headerText="Id">
+       <f:facet name="header">
+					<h:outputText value="Supplier Note"></h:outputText>
+				</f:facet>
+			#{R.noteSup}
+    </p:column>
+ 
+     
+</p:dataTable>
+		
+
+
+
+</h:form>
+    </div>
+                    </div>
+              
+      </ui:define>
+
+	</ui:composition>

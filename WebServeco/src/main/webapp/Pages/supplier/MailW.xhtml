@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+       
+           
+           
+           <div id="generalTabContent" class="tab-content">
+                                    <div id="tab-edit" class="tab-pane fade in active">
+                                        <h:form class="form-horizontal"><h3>Contact Supplier</h3>
+
+
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">Subject</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><h:inputText value="#{mailingBeanW.subject}" type="inputText" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">Message</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><h:inputText value="#{mailingBeanW.corp}" type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+           </div>
+           
+           
+          <h:commandButton id="button" action="#{mailingBeanW.send()}" value="Send MAIL To Supplier"  class="btn btn-primary btn-lg btn-block" type="submit"/>
+           
+           </h:form>
+           </div>
+                 </div>
+              
+      </ui:define>
+
+	</ui:composition>

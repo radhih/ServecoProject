@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      	 xmlns:p="http://primefaces.org/ui"
+      
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+      
+ <div class="container">
+		  <script type="text/javascript">
+			var ws = new WebSocket("ws://localhost:8483/WebServeco/chatroomEP");
+			ws.onmessage = function processMessage(message){
+				var jsonData = JSON.parse(message.data);
+				messagesArea.value += "\n" + jsonData.message ;
+			};
+			function sendMessage(){
+				ws.send(messageText.value);
+				messageText.value = "";
+			}
+		</script>
+     
+      
+		<textarea id="messagesArea" readonly="readonly" rows="12" cols="50">Your first Message will be used as your Nickname</textarea><br/>
+		
+		<h:inputText  type="text" id="messageText" size="50" />
+		<h:commandButton  value="send" onclick="sendMessage();" type="button"/>  
+		</div>
+      </ui:define>
+
+	</ui:composition>

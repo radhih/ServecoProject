@@ -1,0 +1,45 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+  	  xmlns:p="http://primefaces.org/ui"
+      template="../../Templates/layout.xhtml">
+      <ui:define name="content">
+       
+ <div class="panel panel-green">
+                                            <div class="panel-heading">
+                                                CAR AVAILABITY MANAGMENT</div>
+                                                <p:growl id="growl" showDetail="true" sticky="true" /> 
+                                                
+                                            <div class="panel-body pan">
+                                                <h:form enctype="multipart/form-data">
+                                              
+                                                                                                
+                                                    
+                                                 
+                                                    <hr />
+                                                  
+                                                                    <p:panel header="PLEASE SELECT A CAR" style="margin-bottom:10px;">                                    
+                                                    
+                                                    <div class="form-group">
+                                                    
+                                                         <h:selectOneMenu value="#{availableBean.car}" class="form-control"  converter="ac">
+							  									  <f:selectItems value="#{availableBean.cars}" />
+													</h:selectOneMenu>
+                                                        </div>
+                                                         </p:panel>
+                                               
+                                                  
+                                                <div class="form-actions text-right pal">
+                                                           <h:commandButton id="button" action="#{availableBean.doTurnOffV()}" value="Turn OFF"  class="btn btn-primary" type="submit"/>
+                                                        
+                                                </div>
+                                                </h:form>
+                                            </div>
+                                        </div>
+   
+               
+              
+      </ui:define>
+
+	</ui:composition>
