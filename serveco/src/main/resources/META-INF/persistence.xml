@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Serveco">
+		<jta-data-source>java:jboss/datasource/serveco</jta-data-source>
+		<class>entities.Accident</class>
+		<class>entities.Admin</class>
+		<class>entities.Advertisement</class>
+		<class>entities.Bill</class>
+		<class>entities.Blame</class>
+		<class>entities.Categorie</class>
+		<class>entities.Claim</class>
+		<class>entities.Client</class>
+		<class>entities.ClientAskClient</class>
+		<class>entities.Note</class>
+		<class>entities.Reservation</class>
+		<class>entities.ReservationPk</class>
+		<class>entities.SubscriptionAdmin</class>
+		<class>entities.SubscriptionSupplier</class>
+		<class>entities.SuperAdmin</class>
+		<class>entities.Supplier</class>
+		<class>entities.Vehicul</class>
+		<class>entities.users</class>
+	
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>		
+</persistence>
