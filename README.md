@@ -3,6 +3,8 @@ The aim of the project is to develop a platform of vehicle’s services booking 
 ##serveco :EJB project
 ##Webserveco :JSF web application project
 ##DesktopServceo: java application(swing)
+##ServecoAndroid: android application
+
 
 ## How to run 
 1. Create the datasource with the specific name mentioned in the persistence.xml file. please verify the server port number because i am using 8383 with an offset of 100.
