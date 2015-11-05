@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical" 
+
+    android:background="@drawable/background" >
+
+    <ListView
+        android:id="@+id/listViewVehicule"
+        android:layout_width="match_parent"
+        android:layout_height="394dp"
+        android:layout_weight="0.41"
+        android:padding="6dip"
+        tools:listitem="@layout/master_listview_vehicule_row" >
+    </ListView>
+
+</LinearLayout>

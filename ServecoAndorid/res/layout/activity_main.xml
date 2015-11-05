@@ -1,0 +1,82 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tn.esprit.serveco.MainActivity" 
+    android:background="@drawable/background">
+
+  <LinearLayout
+      android:id="@+id/linearLayout1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:layout_x="78dp"
+      android:layout_y="271dp"
+      android:orientation="vertical" >
+
+      <Button
+          android:id="@+id/btnFacebook"
+          android:layout_width="121dp"
+          android:layout_height="36dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_marginBottom="49dp"
+          android:layout_weight="0.17"
+          android:background="@drawable/facebook" />
+
+      <EditText
+          android:id="@+id/editTextmail"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp"
+          android:ems="10"
+          android:hint="Login"
+          android:inputType="textEmailAddress"
+          android:textColor="#17CFCF" />
+
+      <EditText
+          android:id="@+id/editTextpass"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/linearLayout1"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="30dp"
+          android:ems="10"
+          android:hint="Password"
+          android:inputType="textPassword"
+          android:textColor="#17CFCF" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.28" />
+
+      <Button
+          android:id="@+id/buttonC"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginBottom="3dp"
+          android:background="@drawable/b2"
+          android:text="Sign up"
+          android:textColor="#17CFCF" />
+
+      <Button
+          android:id="@+id/buttonConnect"
+          android:layout_width="393dp"
+          android:layout_height="45dp"
+          android:layout_marginBottom="3dp"
+          android:layout_weight="0.13"
+          android:background="@drawable/b2"
+          android:text="connect"
+          android:textColor="#17CFCF" />
+
+  </LinearLayout>
+
+</AbsoluteLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tn.esprit.serveco"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+<permission
+    
+    android:name="tn.esprit.tn.permission.MAPS_RECEIVE"
+    android:protectionLevel="signature" />
+<uses-permission android:name="tn.esprit.tn.permission.MAPS_RECEIVE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+<uses-feature
+    android:glEsVersion="0x00020000"
+    android:required="true"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data 
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+       <activity
+            android:name=".DriversMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.LL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      <activity
+            android:name=".ListService"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.L" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Authentication"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.S" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.Menu1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+          <activity
+            android:name=".MainMaz"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.maz" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+          <activity
+            android:name=".AskOtherCustomers"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.AskOther" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+          
+         <activity
+            android:name=".Mail"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.mail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>    
+         <activity
+            android:name=".MapM"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.LW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>     
+           <activity
+            android:name=".SignUp"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.Sign" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>   
+           <activity
+            android:name=".MainActivityL"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.sss" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>   
+           <activity
+            android:name=".DetailVehicle"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.sd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>       
+           
+           
+           
+           <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+ <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDKtB6sZanS7j7__cYWIswnRRrzf3FQpf0" />      
+    </application>
+
+</manifest>

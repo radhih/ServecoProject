@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/background">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="85dp"
+        android:layout_y="20dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/EditText01"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="80dp"
+        android:layout_y="80dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/EditText05"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="73dp"
+        android:layout_y="302dp"
+        android:ems="10"
+        android:hint="Age" 
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/EditText04"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="73dp"
+        android:layout_y="264dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/EditText02"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="76dp"
+        android:layout_y="221dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/EditText03"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="79dp"
+        android:layout_y="174dp"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/EditText06"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_x="80dp"
+        android:layout_y="129dp"
+        android:ems="10"
+        android:hint="Mail"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="117dp"
+        android:layout_y="376dp"
+        android:text="Subscribe" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="106dp"
+        android:layout_y="439dp"
+        android:text="" />
+
+</AbsoluteLayout>
